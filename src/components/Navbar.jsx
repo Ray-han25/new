@@ -15,16 +15,18 @@ import Logo from "../assets/Exclusive.png"
 const Navbar = () => {
     return (
         <>
+                <nav className=' py-7 border-b border-black'>
             <Container>
-                <nav className=' py-7'>
                     <Flex className={'flex justify-between'}>
 
-                        <div><img src={Logo} alt="" /></div>
+                        <div><a href="#"><img src={Logo} alt="" /></a></div>
                         <ul className=' flex gap-12'>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Sign Up</a></li>
+                            <li className=' relative'>
+                                <a className='under' href="#">Home</a>
+                                </li>
+                            <li className=' relative'><a className='under' href="#">Contact</a></li>
+                            <li className=' relative'><a  className='under' href="#">About</a></li>
+                            <li className=' relative'><a className='under' href="#">Sign Up</a></li>
                         </ul>
                         <Flex className={' gap-6 justify-center items-center'}>
                             <div className=' relative'><input className=' bg-[#F5F5F5] py-1.75 pl-4  pr-13.25 outline-none' type="text" placeholder='What are you looking for?' />
@@ -38,8 +40,8 @@ const Navbar = () => {
                         </Flex>
 
                     </Flex>
-                </nav>
             </Container>
+                </nav>
 
 
         </>
@@ -47,3 +49,7 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+
+

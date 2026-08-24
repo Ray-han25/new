@@ -9,3 +9,19 @@
 @utility container {
   margin-inline: auto;
 }
+
+/* -------------------------Navbar under */
+.under::after{
+content: '';
+width: 0;
+height: 1px;
+position: absolute;
+bottom: 15px;
+left: 0;
+background:black ;
+transition: all linear .4s;
+
+}
+.under:hover::after{
+  width: 100%;
+}
