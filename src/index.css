@@ -25,3 +25,7 @@ transition: all linear .4s;
 .under:hover::after{
   width: 100%;
 }
+.slick-dots .slick-active div{
+  background: red;
+  border: 2px solid white;
+}

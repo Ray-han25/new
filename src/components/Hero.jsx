@@ -15,7 +15,18 @@ const Hero = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+         appendDots: dots => (
+      <div className=" relative">
+        <ul className=" absolute -top-16.5 left-83.75" style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: i => (
+      <div
+         className=" w-3.5 h-3.5 rounded-full bg-gray-500"
+      >
+      </div>
+    )
     };
 
 
@@ -23,7 +34,7 @@ const Hero = () => {
         <>
             <Container>
                 <Flex>
-                    <div className=' border-r border-black '>
+                    <div className=" w- border-r  border-black ">
                         <ul className=' flex flex-col gap-y-4 mt-8 mr-5.5 w-50'>
                             <li><a href="">Woman’s Fashion</a></li>
                             <li><a href="">Men’s Fashion</a></li>
@@ -36,7 +47,7 @@ const Hero = () => {
                             <li><a href=""></a>Health & Beauty</li>
                         </ul>
                     </div>
-                    <div className=' w-full py-10 pl-12.5' >
+                    <div className=' pt-10 pl-12.5 w-[80%]' >
                         <Slider {...settings}>
                             <div><img src={heroImg} alt="" /></div>
                             <div><img src={heroImg} alt="" /></div>
