@@ -6,9 +6,6 @@ const Counter = () => {
 
     const conduct_date = '2027-03-25 16:54:00';
     const [countdow, setcountdow] = useState({})
-   
-    console.log(countdow)
-    
     useEffect(() => {
         setInterval(() => {
           const countDown = countDownDateAndTime(conduct_date);
