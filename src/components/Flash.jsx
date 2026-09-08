@@ -18,7 +18,7 @@ function SampleNextArrow(props) {
       onClick={onClick}
     > 
     
-     <div className='absolute -top-104 right-36.75 w-12 h-12 rounded-full bg-[#f5f5f5] flex justify-center items-center'><FaArrowLeft className=' text-2xl ' /></div>
+     <div className='absolute -top-112 right-36.75 w-12 h-12 rounded-full bg-[#f5f5f5] flex justify-center items-center duration-300 hover:text-white text-black hover:bg-black'><FaArrowLeft className=' text-2xl ' /></div>
   
 
     
@@ -33,7 +33,7 @@ function SamplePrevArrow(props) {
    <div  className=' text-black relative '
       onClick={onClick}>
 
-   <div className='absolute -top-15.75 right-22 w-12 h-12 rounded-full bg-[#f5f5f5] flex justify-center items-center'> <FaArrowRight className=' text-black text-2xl ' /></div>
+   <div className='absolute -top-22.75 right-22 w-12 h-12 rounded-full bg-[#f5f5f5] flex justify-center items-center duration-300 hover:text-white text-black hover:bg-black '> <FaArrowRight className='  text-2xl ' /></div>
 
    </div>
   );
@@ -51,7 +51,6 @@ const Flash = () => {
     prevArrow: <SamplePrevArrow />
   }
   const Slider =__esModule.default||__esModule
- console.log(__esModule.default)
   return (
     <div className=' mt-41'>
       <Container>
