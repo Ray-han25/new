@@ -8,6 +8,7 @@ import Category from './components/Category'
 import Products from './components/Products'
 import Jbu from './components/Jbu'
 import Productsall from './components/Productsall'
+import Arrival from './components/Arrival'
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
     <Products/>
     <Jbu/>
     <Productsall/>
+    <Arrival/>
 
     
   
