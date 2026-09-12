@@ -35,3 +35,23 @@ transition: all linear .4s;
   background: red;
   border: 2px solid white;
 }
+element {
+	display: none;
+}
+.slick-prev::before, .slick-next::before {
+
+	font-size: -2px;
+
+}
+.slick-prev::before, .slick-next::before {
+	font-family: 'slick';
+	font-size: 0px;
+	line-height: 1;
+	opacity: .75;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.slick-prev {
+	left: 32px;
+}
