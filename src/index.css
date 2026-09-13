@@ -45,7 +45,7 @@ element {
 }
 .slick-prev::before, .slick-next::before {
 	font-family: 'slick';
-	font-size: 0px;
+	font-size: 0px !important;
 	line-height: 1;
 	opacity: .75;
 	color: white;
@@ -54,4 +54,8 @@ element {
 }
 .slick-prev {
 	left: 32px;
+}
+.slick-initialized .slick-slide {
+    display: flex !important;
+    justify-content: center;
 }

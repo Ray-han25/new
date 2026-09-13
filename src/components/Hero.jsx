@@ -54,7 +54,7 @@ const Hero = () => {
                             <li><a href=""></a>Health & Beauty</li>
                         </ul>
                     </div>
-                    <div className=' relative pt-10 pl-27 lg:pl-12.5 w-[80%]' >
+                    <div className=' relative pt-10 pl-43 lg:pl-12.5 w-[94%] lg:w-[80%]' >
                         <Slider {...settings}>
                             <div><img src={heroImg} alt="" /></div>
                             <div><img src={heroImg} alt="" /></div>
