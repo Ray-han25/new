@@ -80,9 +80,9 @@ const Flash = () => {
   return (
     <div className=' mt-41'>
       <Container>
-        <Flex className={` flex-wrap gap-21.75 mb-10`}>
+        <Flex className={` flex-wrap lg:gap-21.75 mb-5 lg:mb-10`}>
           <div><SectionHeder title="Today’s" Bigtext='Flash Sales' /></div>
-          <div className='mt-14.5'> <Counter /></div>
+          <div className=' mt-6.5 not-first:lg:mt-14.5'> <Counter /></div>
         </Flex>
            <Slider {...settings}>
 
@@ -113,7 +113,7 @@ const Flash = () => {
           cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40'
         />
           </Slider> 
-          <div className=' flex justify-center mt-9  border-b border-[#b3b3b3]'><Buttonall className={`mb-15`}  ButtonData={`View All Products`}/></div>
+          <div className=' flex justify-center mt-5 lg:mt-9  border-none lg:border-b border-[#b3b3b3]'><Buttonall className={` mb-8 lg:mb-15`}  ButtonData={`View All Products`}/></div>
       </Container>
     </div>
   )

@@ -15,22 +15,22 @@ const Counter = () => {
 
     return (
        <>
-       <Flex className='gap-9'>
+       <Flex className='   gap-4 lg:gap-9'>
          <div>
             <h5 className=' text-[12px] font-normal font-famailyP'>Days</h5>
-            <h2 className=' text-[32px] font-bold font-inter text-black flex items-center justify-center gap-4.5'>{countdow.days} <span className=' text-[#e07575]'>:</span></h2>
+            <h2 className='text-2xl lg:text-[32px] font-bold font-inter text-black flex items-center justify-center gap-4.5'>{countdow.days} <span className=' text-[#e07575]'>:</span></h2>
         </div>
         <div>
             <h5 className=' text-[12px] font-normal font-famailyP'>Hours</h5>
-            <h2 className=' text-[32px] font-bold font-inter text-black flex items-center justify-center gap-4.5'>{countdow.hours}<span className=' text-[#e07575]'>:</span></h2>
+            <h2 className='text-2xl lg:text-[32px] font-bold font-inter text-black flex items-center justify-center gap-4.5'>{countdow.hours}<span className=' text-[#e07575]'>:</span></h2>
         </div>
         <div>
             <h5 className=' text-[12px] font-normal font-famailyP'>Minutes</h5>
-            <h2 className=' text-[32px] font-bold font-inter text-black flex items-center justify-center gap-4.5'>{countdow.minutes} <span className=' text-[#e07575]'>:</span></h2>
+            <h2 className='text-2xl lg:text-[32px] font-bold font-inter text-black flex items-center justify-center gap-4.5'>{countdow.minutes} <span className=' text-[#e07575]'>:</span></h2>
         </div>
         <div>
             <h5 className=' text-[12px] font-normal font-famailyP'>Seconds</h5>
-            <h2 className=' text-[32px] font-bold font-inter text-black'>{countdow.seconds} </h2>
+            <h2 className='text-2xl lg:text-[32px] font-bold font-inter text-black'>{countdow.seconds} </h2>
         </div>
        
        </Flex>
