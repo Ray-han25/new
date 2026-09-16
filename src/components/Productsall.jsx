@@ -14,13 +14,14 @@ const Productsall = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 3,
+    
   };
   const Slider=__esModule.default||__esModule
 
   return (
     <>
 <Container>
-<div className=' mb-15 mt-20'><SectionHeder className={``} title='Our Products' Bigtext='Explore Our Products' /></div>
+<div className='  lg:mb-15 mt-20'><SectionHeder className={``} title='Our Products' Bigtext='Explore Our Products' /></div>
 <Slider {...settings}>
     <div >
         <ProductsCrad className={`mb-15`} cradImg={catfoood}  cradText='Breed Dry Dog Food' price='100' review='35'/>

@@ -40,10 +40,7 @@ const CounterJbu = () => {
        
         <h6 className='text-black text-[16px] font-medium font-famailyP '>{countdow.seconds}</h6>
       <h6 className='text-black text-[11px] font-normal font-famailyP'>seconds</h6>
-      
     </Flex>
-    
-
   </Flex>
  
     

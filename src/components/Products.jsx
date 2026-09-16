@@ -10,12 +10,12 @@ const Products = () => {
     return (
         <>
             <Container>
-                <Flex className={`justify-between mb-15 `}>
+                <Flex className={`justify-between mb-3 lg:mb-15 `}>
 
                     <div><SectionHeder title='This Month' Bigtext='Best Selling Products' /></div>
                     <Buttonall className={`mt-10`} ButtonData='View All' />
                 </Flex >
-                <Flex className={`gap-7.5 mb-35`}>
+                <Flex className={` flex-wrap justify-center gap-7.5 mb-35`}>
                  <ProductsCrad cradImg={imgprodu} cradText={'The north coat'} price='260'  disPrice='360' review='65'/>
                  <ProductsCrad cradImg={imgprodu} cradText={'The north coat'} price='260'  disPrice='360' review='65'/>
                  <ProductsCrad cradImg={imgprodu} cradText={'The north coat'} price='260'  disPrice='360' review='65'/>

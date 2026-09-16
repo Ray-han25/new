@@ -78,11 +78,11 @@ const Flash = () => {
   };
   const Slider =__esModule.default||__esModule
   return (
-    <div className=' mt-41'>
+    <div className='mt-8 lg:mt-41'>
       <Container>
         <Flex className={` flex-wrap lg:gap-21.75 mb-5 lg:mb-10`}>
           <div><SectionHeder title="Today’s" Bigtext='Flash Sales' /></div>
-          <div className=' mt-6.5 not-first:lg:mt-14.5'> <Counter /></div>
+          <div className=' mt-2.5 not-first:lg:mt-14.5'> <Counter /></div>
         </Flex>
            <Slider {...settings}>
 
