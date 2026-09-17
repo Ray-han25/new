@@ -9,6 +9,8 @@ import Products from './components/Products'
 import Jbu from './components/Jbu'
 import Productsall from './components/Productsall'
 import Arrival from './components/Arrival'
+import CUSTOMER from './components/CUSTOMER'
+import Footer from './components/Footer'
 
 
 
@@ -26,6 +28,8 @@ const App = () => {
     <Jbu/>
     <Productsall/>
     <Arrival/>
+    <CUSTOMER/>
+    <Footer/>
 
     
   

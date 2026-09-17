@@ -13,12 +13,12 @@ const Arrival = () => {
     <div className='mb-34'>
 <Container>
     <SectionHeder title='Featured' Bigtext='New Arrival'/>
-<Flex className={` mt-15 gap-7.5`}>
+<Flex className={` mt-15 gap-7.5 flex-wrap`}>
 <div><img src={imgarri} alt="" /></div>
 <div>
     <img src={imgfr} alt="" />
 
-    <Flex className={`gap-7.5 mt-7.5`}>
+    <Flex className={` flex-wrap gap-7.5 mt-7.5`}>
         <img src={spekar} alt="" />
         <img src={parfum} alt="" />
     </Flex>

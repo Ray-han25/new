@@ -14,14 +14,39 @@ const Productsall = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 3,
-    
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 780,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,           
+        }
+      }
+    ]
   };
   const Slider=__esModule.default||__esModule
 
   return (
     <>
 <Container>
-<div className='  lg:mb-15 mt-20'><SectionHeder className={``} title='Our Products' Bigtext='Explore Our Products' /></div>
+<div className='  lg:mb-15 mt-10 lg:mt-20'><SectionHeder className={``} title='Our Products' Bigtext='Explore Our Products' /></div>
 <Slider {...settings}>
     <div >
         <ProductsCrad className={`mb-15`} cradImg={catfoood}  cradText='Breed Dry Dog Food' price='100' review='35'/>
