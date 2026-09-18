@@ -37,8 +37,6 @@ const Hero = () => {
     return (
         <>
             <Container> 
-            
-
                 <Flex >
                     <div className={`${show? "opacity- translate-y-0 visible": "opacity-100 -translate-y-3 invisible"} lg:mt-3 lg:opacity-100 lg:visible absolute top-100.75 left-0 lg:static p-3  bg-black text-white lg:text-black rounded-[14px] lg:rounded-none  lg:bg-white lg:p-0 lg:block lg:border-r  border-black  `}>
                         <ul className='text-[9px] lg:text-[24px]    flex  items-center flex-col gap-y-1 lg:mt-8 lg:mr-5.5 w-84 md:w-37 lg:w-50'>
@@ -53,7 +51,7 @@ const Hero = () => {
                             <li><a href=""></a>Health & Beauty</li>
                         </ul>
                     </div>
-                    <div className=' relative pt-3 lg:pt-10 mt-2 pl-3 md:pl-43 lg:pl-12.5 w-[94%] lg:w-[80%]' >
+                    <div className=' relative pt-3 lg:pt-10 mt-2 px-3 md:pl-43 lg:pl-12.5 w-full lg:w-[80%]' >
                         <Slider {...settings}>
                             <div><img src={heroImg} alt="" /></div>
                             <div><img src={heroImg} alt="" /></div>

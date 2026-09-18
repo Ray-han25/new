@@ -13,7 +13,7 @@ const CUSTOMER = () => {
   return (
     <>
       <Container>
-        <Flex className=' flex-wrap justify-around mb-35'>
+        <Flex className=' flex-wrap justify-around mb-10 lg:mb-35'>
           <Sarviscomp Logo={<TbTruckDelivery />} Texcust='FREE AND FAST DELIVERY' text2='Free delivery for all orders over $140' />
           <Sarviscomp Logo={<RiCustomerService2Line />
           } Texcust='24/7 CUSTOMER SERVICE' text2='Friendly 24/7 customer support' />

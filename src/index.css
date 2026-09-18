@@ -53,9 +53,30 @@ element {
 	-moz-osx-font-smoothing: grayscale;
 }
 .slick-prev {
-	left: 32px;
+	left: 32px !important;
 }
 .slick-initialized .slick-slide {
     display: flex !important;
     justify-content: center;
+}
+.slick-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  width: 100%;
+}
+
+.slick-slide img {
+  width: 100%;
+  display: block;
 }

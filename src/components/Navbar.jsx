@@ -21,7 +21,7 @@ const Navbar = () => {
             <Container>
                     <Flex className={'flex justify-between relative z-10'}>
                         <div><a href="#"><img src={Logo} alt="" /></a></div>
-                       <div className={`${show ? 'opacity-100 translate-y-0 visible':'opacity-0 -translate-y-3 invisible'}  transition-all duration-300 ease-in-out absolute  top-15.5 mb:top-5.5 md:left-52.25 lg:static bg-black lg:bg-white text-white lg:text-black p-6 lg:p-0 rounded-[14px]  lg:flex justify-center gap-60.75`}>
+                       <div className={`${show ? 'opacity-100 translate-y-0 visible':'opacity-0 -translate-y-3 invisible'}  transition-all duration-300 ease-in-out absolute  top-15.5 mb:top-5.5 md:left-52.25 lg:static bg-black lg:bg-white text-white lg:text-black p- lg:p-0 rounded-[14px]  lg:flex justify-center gap-60.75`}>
                          <ul className=' flex-col lg:flex-row text-center flex gap-2 lg:gap-12'>
                             <li className=' relative'>
                                 <a className='under' href="#">Home</a>

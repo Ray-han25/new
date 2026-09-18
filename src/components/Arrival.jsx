@@ -10,17 +10,17 @@ import SectionHeder from './SectionHeder'
 const Arrival = () => {
   return (
     <>
-    <div className='mb-34'>
+    <div className=' mb-12 lg:mb-34'>
 <Container>
     <SectionHeder title='Featured' Bigtext='New Arrival'/>
-<Flex className={` mt-15 gap-7.5 flex-wrap`}>
+<Flex className={` mt-15 gap-2.5 lg:gap-7.5 flex-wrap`}>
 <div><img src={imgarri} alt="" /></div>
 <div>
     <img src={imgfr} alt="" />
 
-    <Flex className={` flex-wrap gap-7.5 mt-7.5`}>
-        <img src={spekar} alt="" />
-        <img src={parfum} alt="" />
+    <Flex className={`  gap-2.5 lg:gap-7.5 mt-2.5 lg:mt-7.5 justify-center`}>
+        <div className='  w-45 lg:w-full'><img src={spekar} alt="" /></div>
+       <div className=' w-45 lg:w-full'> <img src={parfum} alt="" /></div>
     </Flex>
 </div>
 
