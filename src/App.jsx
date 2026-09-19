@@ -21,14 +21,7 @@ const App = () => {
     
     <Header/>
     <Navbar/>
-    <Hero/>
-    <Flash/>
-    <Category/>
-    <Products/>
-    <Jbu/>
-    <Productsall/>
-    <Arrival/>
-    <CUSTOMER/>
+  
     <Footer/>
 
     
