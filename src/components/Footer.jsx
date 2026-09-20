@@ -27,7 +27,8 @@ const Footer = () => {
               <div className='w-29.5' ><img src={Logo} alt="Logo" /></div>
               <h2 className=' text-white text-[20px] font-normal font-famailyP'>Subscribe</h2>
               <p className=' text-white text-[16px] font-famailyP font-normal'>Get 10% off your first order</p>
-              <Flex className=' pr-19 justify-center items-center w-54.25 h-12 rounded-sm border border-white '><input className='pl-4 py-4 text-white border-none outline-none' type="text" placeholder='Enter your email' />
+              <Flex className=' pr-19 justify-center items-center w-54.25 h-12 rounded-sm border border-white '>
+                <input className='pl-4 lg:pl-18 py-4 text-white border-none outline-none' type="text" placeholder='Enter your email' />
                 <div className=' text-2xl text-white '><VscSend /></div></Flex>
             </Flex >
             <Flex className=' text-white flex-col gap-y-4'>

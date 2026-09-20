@@ -89,28 +89,28 @@ const Flash = () => {
 
 
         <Crad
-          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40'
+          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40.0'
         />
         <Crad
-          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40'
+          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40.0'
         />
         <Crad
-          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40'
+          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40.0'
         />
         <Crad
-          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40'
+          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40.0'
         />
         <Crad
-          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40'
+          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40.0'
         />
         <Crad
-          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40'
+          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40.0'
         />
         <Crad
-          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40'
+          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40.0'
         />
         <Crad
-          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40'
+          cradImg={consol} cradText='HAVIT HV-G92 Gamepad' price='120' disPrice='160' review='88' Red_discoun='40.0'
         />
           </Slider> 
           <div className=' flex justify-center mt-5 lg:mt-9  border-none lg:border-b border-[#b3b3b3]'><Buttonall className={` mb-8 lg:mb-15`}  ButtonData={`View All Products`}/></div>
