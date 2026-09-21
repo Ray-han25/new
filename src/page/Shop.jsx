@@ -4,10 +4,11 @@ import Flex from '../components/Flex'
 import Crad from '../components/Crad'
 import kebood from '../assets/Frame 612.png'
 import axios from 'axios';
+import Paginate from '../components/Paginate'
 
 const Shop = () => {
   const [Product, setProduct] = useState([])
-  console.log(Product)
+
   async function allProduct() {
     await axios.get('https://dummyjson.com/products')
       .then((date) => {
@@ -19,7 +20,7 @@ const Shop = () => {
   useEffect(() => {
     allProduct()
   }, [])
-
+  // console.log(Product)
 
 
 
@@ -71,9 +72,8 @@ const Shop = () => {
             </div>
             <Flex className={`flex-wrap gap-y-8 mt-8 w-[80%] justify-end`}>
               {
-                Product.map((items) => {
-                  console.log(items)
-                  return <Crad cradImg={items.thumbnail} 
+                Product.map((items ,idx) => {
+                  return <Crad key={idx} cradImg={items.thumbnail} 
                   cradText={items.title}
                    price={ Math.round(items.price-items.discountPercentage*items.price/100)}
                     disPrice={ items.price}
@@ -83,7 +83,7 @@ const Shop = () => {
                     />
                 })
               }
-
+<Paginate/>
             </Flex>
           </Flex>
         </Container>

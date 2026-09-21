@@ -31,7 +31,7 @@ const Hero = () => {
     )
     };
     const [show ,setshow]=useState(false)
-    console.log(show)
+
 
 
     return (
