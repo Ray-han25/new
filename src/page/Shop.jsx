@@ -4,7 +4,9 @@ import Flex from '../components/Flex'
 import Crad from '../components/Crad'
 import kebood from '../assets/Frame 612.png'
 import axios from 'axios';
+import UpLocation from '../components/UpLocation'
 import Paginate from '../components/Paginate'
+// import Paginate from '../components/Paginate'
 
 const Shop = () => {
   const [Product, setProduct] = useState([])
@@ -31,6 +33,7 @@ const Shop = () => {
 
       <div className='mt-20.25 mb-25.25'>
         <Container>
+          <UpLocation/>
           <Flex className='justify-between'>
             <h2 className='text-[#262626] font-famailyP font-bold text-[20px]'>Shop by Category</h2>
             <p className='text-[16px] font-normal font-famailyP text-black '>Show : <span className='ml-2'>
@@ -71,21 +74,22 @@ const Shop = () => {
               </Flex>
             </div>
             <Flex className={`flex-wrap gap-y-8 mt-8 w-[80%] justify-end`}>
-              {
-                Product.map((items ,idx) => {
-                  return <Crad key={idx} cradImg={items.thumbnail} 
-                  cradText={items.title}
-                   price={ Math.round(items.price-items.discountPercentage*items.price/100)}
-                    disPrice={ items.price}
-                   review={items.reviews.length}
-                   Red_discoun={ items.discountPercentage }
-                   ster={items.rating}
-                    />
+              {/* {
+                Product.map((items, idx) => {
+                  return <Crad key={idx} cradImg={items.thumbnail}
+                    cradText={items.title}
+                    price={Math.round(items.price - items.discountPercentage * items.price / 100)}
+                    disPrice={items.price}
+                    review={items.reviews.length}
+                    Red_discoun={items.discountPercentage}
+                    ster={items.rating}
+                  />
                 })
-              }
-<Paginate/>
+              } */}
+              <Paginate itemsPerPage={6} Product={Product}/>
             </Flex>
           </Flex>
+          
         </Container>
       </div>
     </>

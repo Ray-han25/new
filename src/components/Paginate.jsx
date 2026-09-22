@@ -1,36 +1,40 @@
-import React from 'react'
-import React, { useEffect, useState } from 'react';
-import ReactPaginate from 'react-paginate';
+import React, { useState } from 'react'
+import ReactPaginat from 'react-paginate';
+import Crad from './Crad';
+      
+const ReactPaginate =ReactPaginat.default || ReactPaginat
+const Paginate = ({ itemsPerPage, Product = [] }) => {
+  const items = Array.isArray(Product) ? Product : [];
+console.log(items)
 
-const Paginate = () => {
-    // Example items, to simulate fetching from another resources.
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
-function items({ currentItems }) {
+function Items({ currentItems }) {
   return (
     <>
       {currentItems &&
-        currentItems.map((item) => (
-          <div>
-            <h3>Item #{item}</h3>
-          </div>
+        currentItems.map((items,inx) => (
+         <Crad key={inx} cradImg={items.thumbnail}
+                    cradText={items.title}
+                    price={Math.round(items.price - items.discountPercentage * items.price / 100)}
+                    disPrice={items.price}
+                    review={items.reviews.length}
+                    Red_discoun={items.discountPercentage}
+                    ster={items.rating}
+                  />
         ))}
     </>
   );
 }
-// Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
+ 
   const [itemOffset, setItemOffset] = useState(0);
 
-  // Simulate fetching items from another resources.
-  // (This could be items from props; or items loaded in a local state
-  // from an API endpoint with useEffect and useState)
+
   const endOffset = itemOffset + itemsPerPage;
   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
-  // Invoke when user click to request another page.
+ 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
     console.log(
@@ -39,10 +43,9 @@ function items({ currentItems }) {
     setItemOffset(newOffset);
   };
 
-    
   return (
-    <>
-     <Items currentItems={currentItems} />
+   <>
+      <Items currentItems={currentItems} />
       <ReactPaginate
         breakLabel="..."
         nextLabel="next >"
@@ -52,9 +55,55 @@ function items({ currentItems }) {
         previousLabel="< previous"
         renderOnZeroPageCount={null}
       />
-
-
-
+            import React, { useState } from 'react';
+      import ReactPaginate from 'react-paginate';
+      import Crad from './Crad';
+      
+      const Paginate = ({ itemsPerPage = 10, Product = [] }) => {
+        const items = Array.isArray(Product) ? Product : [];
+        const [itemOffset, setItemOffset] = useState(0);
+      
+        const endOffset = itemOffset + itemsPerPage;
+        const currentItems = items.slice(itemOffset, endOffset);
+        const pageCount = Math.ceil(items.length / itemsPerPage);
+      
+        const handlePageClick = (event) => {
+          setItemOffset(event.selected * itemsPerPage);
+        };
+      
+        return (
+          <>
+            {currentItems.map((item, index) => (
+              <Crad
+                key={item.id ?? index}
+                cradImg={item.thumbnail}
+                cradText={item.title}
+                price={Math.round(
+                  item.price - (item.discountPercentage * item.price) / 100
+                )}
+                disPrice={item.price}
+                review={item.reviews?.length ?? 0}
+                Red_discoun={item.discountPercentage}
+                ster={item.rating}
+              />
+            ))}
+      
+            {pageCount > 0 && (
+              <ReactPaginate
+                breakLabel="..."
+                nextLabel="next >"
+                previousLabel="< previous"
+                onPageChange={handlePageClick}
+                pageRangeDisplayed={5}
+                pageCount={pageCount}
+                renderOnZeroPageCount={null}
+              />
+            )}
+          </>
+        );
+      };
+      
+      export default Paginate;
     </>
   )
 }

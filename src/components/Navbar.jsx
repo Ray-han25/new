@@ -29,8 +29,13 @@ const Navbar = () => {
                                         Home
                                     </NavLink>
                                 </li>
+                              
                                 <li className=' relative'><a className='under' href="#">Contact</a></li>
-                                <li className=' relative'><a className='under' href="#">About</a></li>
+                                <li className=' relative'>
+                                    <NavLink to="/About" end>
+                                        About
+                                    </NavLink>
+                                </li>
                                 <li className=' relative'><a className='under' href="#">Sign Up</a></li>
                             </ul>
                             <Flex className={' mt-4 lg:mt-0 gap-6 justify-center items-center'}>
