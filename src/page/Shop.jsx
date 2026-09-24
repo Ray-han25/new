@@ -73,21 +73,10 @@ const Shop = () => {
                 <h2 className=' font-famailyP font-normal text-[16px] text-[#767676]'>Color 3</h2>
               </Flex>
             </div>
-            <Flex className={`flex-wrap gap-y-8 mt-8 w-[80%] justify-end`}>
-              {/* {
-                Product.map((items, idx) => {
-                  return <Crad key={idx} cradImg={items.thumbnail}
-                    cradText={items.title}
-                    price={Math.round(items.price - items.discountPercentage * items.price / 100)}
-                    disPrice={items.price}
-                    review={items.reviews.length}
-                    Red_discoun={items.discountPercentage}
-                    ster={items.rating}
-                  />
-                })
-              } */}
+            <div  className=' mt-10'>
+        
               <Paginate itemsPerPage={6} Product={Product}/>
-            </Flex>
+            </div>
           </Flex>
           
         </Container>

@@ -1,19 +1,21 @@
 import React, { useState } from 'react'
 import ReactPaginat from 'react-paginate';
 import Crad from './Crad';
-      
-const ReactPaginate =ReactPaginat.default || ReactPaginat
-const Paginate = ({ itemsPerPage, Product = [] }) => {
-  const items = Array.isArray(Product) ? Product : [];
-console.log(items)
+import { Flex } from 'antd';
+
+const Paginate = ({itemsPerPage,Product }) => {
+  const ReactPaginate= ReactPaginat.default || ReactPaginat;
+  const items = Product;
 
 
-function Items({ currentItems }) {
+function Items({ currentItems}) {
+  
   return (
     <>
       {currentItems &&
-        currentItems.map((items,inx) => (
-         <Crad key={inx} cradImg={items.thumbnail}
+        currentItems.map((items ,index) => (
+     
+         <Crad key={index} cradImg={items.thumbnail}
                     cradText={items.title}
                     price={Math.round(items.price - items.discountPercentage * items.price / 100)}
                     disPrice={items.price}
@@ -21,20 +23,15 @@ function Items({ currentItems }) {
                     Red_discoun={items.discountPercentage}
                     ster={items.rating}
                   />
+          
         ))}
     </>
   );
-}
- 
-  const [itemOffset, setItemOffset] = useState(0);
-
-
+} 
+ const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
-
- 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
     console.log(
@@ -42,68 +39,26 @@ function Items({ currentItems }) {
     );
     setItemOffset(newOffset);
   };
-
   return (
-   <>
-      <Items currentItems={currentItems} />
-      <ReactPaginate
+    <>
+    <Flex className={`flex-wrap gap-y-8 justify-end`}>
+       <Items currentItems={currentItems} />
+      </Flex>      
+    
+   
+       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel=""
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel=""
         renderOnZeroPageCount={null}
+        className='flex gap-4 ml-49 mt-10'
+        pageClassName='py-0.2  w-fit px-6.5 bg-black text-[#fff]'
       />
-            import React, { useState } from 'react';
-      import ReactPaginate from 'react-paginate';
-      import Crad from './Crad';
-      
-      const Paginate = ({ itemsPerPage = 10, Product = [] }) => {
-        const items = Array.isArray(Product) ? Product : [];
-        const [itemOffset, setItemOffset] = useState(0);
-      
-        const endOffset = itemOffset + itemsPerPage;
-        const currentItems = items.slice(itemOffset, endOffset);
-        const pageCount = Math.ceil(items.length / itemsPerPage);
-      
-        const handlePageClick = (event) => {
-          setItemOffset(event.selected * itemsPerPage);
-        };
-      
-        return (
-          <>
-            {currentItems.map((item, index) => (
-              <Crad
-                key={item.id ?? index}
-                cradImg={item.thumbnail}
-                cradText={item.title}
-                price={Math.round(
-                  item.price - (item.discountPercentage * item.price) / 100
-                )}
-                disPrice={item.price}
-                review={item.reviews?.length ?? 0}
-                Red_discoun={item.discountPercentage}
-                ster={item.rating}
-              />
-            ))}
-      
-            {pageCount > 0 && (
-              <ReactPaginate
-                breakLabel="..."
-                nextLabel="next >"
-                previousLabel="< previous"
-                onPageChange={handlePageClick}
-                pageRangeDisplayed={5}
-                pageCount={pageCount}
-                renderOnZeroPageCount={null}
-              />
-            )}
-          </>
-        );
-      };
-      
-      export default Paginate;
+
+    
     </>
   )
 }
