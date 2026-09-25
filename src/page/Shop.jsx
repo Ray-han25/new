@@ -6,15 +6,18 @@ import kebood from '../assets/Frame 612.png'
 import axios from 'axios';
 import UpLocation from '../components/UpLocation'
 import Paginate from '../components/Paginate'
-// import Paginate from '../components/Paginate'
+import { Skeleton } from 'antd'
+import Skeliton from '../components/Skeliton'
 
 const Shop = () => {
   const [Product, setProduct] = useState([])
+  const [loading, setLoading] = useState(false)
 
   async function allProduct() {
     await axios.get('https://dummyjson.com/products')
       .then((date) => {
         setProduct(date.data.products)
+        setLoading(true)
       })
 
 
@@ -22,7 +25,7 @@ const Shop = () => {
   useEffect(() => {
     allProduct()
   }, [])
-  // console.log(Product)
+
 
 
 
@@ -33,7 +36,7 @@ const Shop = () => {
 
       <div className='mt-20.25 mb-25.25'>
         <Container>
-          <UpLocation/>
+          <UpLocation />
           <Flex className='justify-between'>
             <h2 className='text-[#262626] font-famailyP font-bold text-[20px]'>Shop by Category</h2>
             <p className='text-[16px] font-normal font-famailyP text-black '>Show : <span className='ml-2'>
@@ -73,12 +76,22 @@ const Shop = () => {
                 <h2 className=' font-famailyP font-normal text-[16px] text-[#767676]'>Color 3</h2>
               </Flex>
             </div>
-            <div  className=' mt-10'>
-        
-              <Paginate itemsPerPage={6} Product={Product}/>
+            <div className={` mt-10 ${loading ? 'block ' :'flex'} flex-wrap gap-y-8 justify-end`}>
+              {loading ?    <Paginate itemsPerPage={6} Product={Product} /> :     <>
+                <Skeliton />
+                <Skeliton />
+                <Skeliton />
+                <Skeliton />
+                <Skeliton />
+                <Skeliton />
+
+              </> }
+
+            
+          
             </div>
           </Flex>
-          
+
         </Container>
       </div>
     </>
